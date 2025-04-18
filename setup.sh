@@ -34,9 +34,20 @@ mkdir -p ~/.config
 
 # Backup existing configs if they exist
 for package in "${packages[@]}"; do
-    if [ -e "~/.config/$package" ] && [ ! -L "~/.config/$package" ]; then
-        echo "Backing up existing ~/.config/$package to ~/.config/${package}.bak"
-        mv "~/.config/$package" "~/.config/${package}.bak"
+    # Check for files in package directory and create backups if needed
+    if [ -d "$package" ]; then
+        find "$package" -type f -o -type l | while read -r file; do
+            # Get the relative path within the package
+            rel_path="${file#$package/}"
+            # Target path in home directory
+            target_path="$HOME/$rel_path"
+            
+            # If the target exists and is not a symlink, back it up
+            if [ -e "$target_path" ] && [ ! -L "$target_path" ]; then
+                echo "Backing up existing $target_path to ${target_path}.bak"
+                mv "$target_path" "${target_path}.bak"
+            fi
+        done
     fi
 done
 
