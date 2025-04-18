@@ -4,6 +4,7 @@ Configuration files for:
 - Neovim
 - Lazygit
 - Ghostty
+- Zsh
 
 ## Deployment
 
