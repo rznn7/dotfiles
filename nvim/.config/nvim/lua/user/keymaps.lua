@@ -5,6 +5,10 @@ vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, desc = "Save" })
 vim.keymap.set('n', '<leader>q', ':q<CR>', { noremap = true, desc = "Quit" })
 vim.keymap.set('n', '<leader>e', ':Explore<CR>', { noremap = true, desc = "File explorer" })
 vim.keymap.set('n', '<CR>', ':noh<CR><CR>', { desc = 'Erase highlights' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-f>', '<C-f>zz')
+vim.keymap.set('n', '<C-b>', '<C-b>zz')
 
 -- Copy/Paste Mappings
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { noremap = true, desc = "Copy to clipboard" })
