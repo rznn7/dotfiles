@@ -9,6 +9,8 @@ vim.opt.smartindent = true
 vim.opt.hlsearch = true
 vim.opt.scrolloff = 10
 
+-- Use system clipboard
+vim.opt.clipboard = "unnamedplus"
 -- Enable inlay hints
 vim.opt.showmode = true
 vim.lsp.inlay_hint.enable(true)

@@ -10,10 +10,6 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-f>', '<C-f>zz')
 vim.keymap.set('n', '<C-b>', '<C-b>zz')
 
--- Copy/Paste Mappings
-vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { noremap = true, desc = "Copy to clipboard" })
-vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p', { noremap = true, desc = "Paste from clipboard" })
-
 -- Telescope Mappings (using the global variable from telescope config)
 vim.keymap.set('n', '<leader>ff', function() _G.telescope_builtin.find_files() end, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', function() _G.telescope_builtin.live_grep() end, { desc = 'Telescope live grep' })
