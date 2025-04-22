@@ -16,15 +16,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p', { noremap = true, desc = "Paste
 
 -- Telescope Mappings (using the global variable from telescope config)
 vim.keymap.set('n', '<leader>ff', function() _G.telescope_builtin.find_files() end, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', function() _G.telescope_builtin.live_grep({
-                bufnr = 0,
-                layout_strategy = "vertical",
-                layout_config = {
-                        preview_height = 0.7, -- Preview takes 50% of the window
-                        width = 0.9,         -- Window takes 90% of screen width
-                        height = 0.8         -- Window takes 60% of screen height
-                }
-        }) end, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fg', function() _G.telescope_builtin.live_grep() end, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', function() _G.telescope_builtin.buffers() end, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', function() _G.telescope_builtin.help_tags() end, { desc = 'Telescope help tags' })
 vim.keymap.set('n', '<leader>fr', function() _G.telescope_builtin.oldfiles() end, { desc = 'Telescope old files' })
@@ -58,8 +50,8 @@ vim.keymap.set('n', '<leader>lb', function()
                 layout_strategy = "vertical",
                 layout_config = {
                         preview_height = 0.7, -- Preview takes 50% of the window
-                        width = 0.9,         -- Window takes 90% of screen width
-                        height = 0.8         -- Window takes 60% of screen height
+                        width = 0.9,          -- Window takes 90% of screen width
+                        height = 0.8          -- Window takes 60% of screen height
                 }
         })
 end, { desc = 'List buffer diagnostics (horizontal)' })
