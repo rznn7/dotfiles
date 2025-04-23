@@ -96,7 +96,11 @@ local function setup_lsp_keymaps(bufnr)
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, with_desc('Show hover documentation'))
         vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, with_desc('Rename symbol'))
         vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, with_desc('Code action'))
-        vim.keymap.set('n', '<leader>lu', function() _G.telescope_builtin.lsp_references() end,
+        vim.keymap.set('n', '<leader>lu', function()
+                        _G.telescope_builtin.lsp_references({
+                                show_line = false
+                        })
+                end,
                 with_desc(('Find usages')))
 end
 
