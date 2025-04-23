@@ -52,6 +52,7 @@ vim.keymap.set('n', '<leader>lb', function()
         })
 end, { desc = 'List buffer diagnostics (horizontal)' })
 
+
 -- Formatting Mappings
 vim.keymap.set('n', '<leader>lf', function()
         require("conform").format({ lsp_fallback = true })
@@ -80,4 +81,25 @@ vim.keymap.set('n', '<leader>ll', function()
         end
 end, { desc = 'Run ESLint fix' })
 
-return {}
+-- LSP mappings
+local function setup_lsp_keymaps(bufnr)
+        local opts = {
+                buffer = bufnr,
+                noremap = true,
+                silent = true
+        }
+        local function with_desc(desc)
+                return vim.tbl_extend("force", opts, { desc = desc })
+        end
+
+        vim.keymap.set('n', '<leader>lg', vim.lsp.buf.definition, with_desc('Go to definition'))
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, with_desc('Show hover documentation'))
+        vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, with_desc('Rename symbol'))
+        vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, with_desc('Code action'))
+        vim.keymap.set('n', '<leader>lu', function() _G.telescope_builtin.lsp_references() end,
+                with_desc(('Find usages')))
+end
+
+return {
+        setup_lsp_keymaps = setup_lsp_keymaps
+}
