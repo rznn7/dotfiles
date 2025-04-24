@@ -8,5 +8,6 @@ require("user.plugin_config.cmp")
 require("user.plugin_config.diffview")
 require("user.plugin_config.lualine")
 require("user.plugin_config.refactoring")
+require("user.plugin_config.nvim-colorizer")
 
 return {}

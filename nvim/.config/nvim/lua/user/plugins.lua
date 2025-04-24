@@ -13,6 +13,7 @@ Plug 'goolord/alpha-nvim'                           -- Greeter/dashboard
 Plug 'MaximilianLloyd/ascii.nvim'                   -- ASCII art for dashboard
 Plug 'nvim-lualine/lualine.nvim'                    -- Status line
 Plug 'nvim-tree/nvim-web-devicons'                  -- File icons
+Plug 'norcalli/nvim-colorizer.lua'                  -- Colorize hex
 
 -- File navigation and management
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.8' })  -- Fuzzy finder
