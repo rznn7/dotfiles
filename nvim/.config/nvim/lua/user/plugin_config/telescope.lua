@@ -2,7 +2,6 @@ _G.telescope_builtin = require('telescope.builtin')
 
 require('telescope').setup({
         defaults = {
-                initial_mode = "normal",
                 layout_strategy = "vertical",
                 sorting_strategy = "ascending",
                 results_title = false,
