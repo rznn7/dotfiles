@@ -15,7 +15,7 @@ local dashboard = require('alpha.themes.dashboard')
 local ascii = require('ascii')
 
 -- Dashboard Header
-dashboard.section.header.val = ascii.get_random("text", "neovim")
+dashboard.section.header.val = ascii.art.text.neovim.sharp
 
 -- Dashboard Menu Buttons
 dashboard.section.buttons.val = {
