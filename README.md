@@ -5,6 +5,57 @@ Configuration files for:
 - Lazygit
 - Ghostty
 - Zsh
+- i3 window manager
+- Wezterm
+
+## Dependencies
+
+### Neovim
+- Neovim (0.9+)
+- Git
+- Ripgrep (for Telescope)
+- npm/node.js (for LSP servers)
+- Python 3 (for some plugins)
+- A C compiler (for Treesitter)
+- JetBrains Mono Nerd Font or any Nerd Font (for icons)
+
+### Lazygit
+- Lazygit
+- Git
+
+### Ghostty
+- Ghostty terminal emulator
+- Rose-pine-moon theme
+
+### Zsh
+- Zsh
+- Oh My Zsh
+- Powerlevel10k theme
+- zsh-autosuggestions plugin
+- zsh-syntax-highlighting plugin
+- eza (modern ls replacement)
+- zoxide (better cd)
+- NVM (Node Version Manager)
+- SDKMAN (Java development tools)
+
+### i3
+- i3 window manager
+- i3blocks
+- i3lock
+- feh (for wallpaper)
+- dmenu
+- pipewire-pulse / pactl (audio)
+- playerctl (media controls)
+- xbacklight (screen brightness)
+- setxkbmap (keyboard layout)
+- xrandr (screen settings)
+
+### Wezterm
+- Wezterm terminal emulator
+- JetBrainsMono Nerd Font
+- MesloLGS Nerd Font
+- Source Han Sans font (for CJK support)
+- Zsh
 
 ## Deployment
 
