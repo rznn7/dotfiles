@@ -140,7 +140,7 @@ alias cd="z"
 export CHROME_BIN=/usr/bin/chromium
 
 # Homebrew setup
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # NVM configuration
 export NVM_DIR="$HOME/.nvm"
