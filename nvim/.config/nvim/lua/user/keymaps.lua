@@ -16,6 +16,9 @@ vim.keymap.set('n', '<leader>fg', function() _G.telescope_builtin.live_grep() en
 vim.keymap.set('n', '<leader>fb', function() _G.telescope_builtin.buffers() end, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', function() _G.telescope_builtin.help_tags() end, { desc = 'Telescope help tags' })
 vim.keymap.set('n', '<leader>fr', function() _G.telescope_builtin.oldfiles() end, { desc = 'Telescope old files' })
+vim.keymap.set('n', '<leader>fs',
+        function() _G.telescope_builtin.lsp_document_symbols({ symbols = { 'method', 'constructor' } }) end,
+        { desc = 'Telescope symbols' })
 
 -- Dashboard Mappings
 vim.keymap.set('n', '<leader>d', ':Alpha<CR>', { noremap = true, desc = "Open dashboard" })
@@ -29,6 +32,9 @@ vim.keymap.set('n', '<leader>gD', ':DiffviewClose<CR>', { noremap = true, desc =
 vim.keymap.set('n', '<leader>gh', ':DiffviewFileHistory<CR>', { noremap = true, desc = "Diffview file history" })
 vim.keymap.set('n', '<leader>gf', ':DiffviewFileHistory %<CR>',
         { noremap = true, desc = "Diffview current file history" })
+
+-- Blame mapping
+vim.keymap.set('n', '<leader>gb', ':BlameToggle<CR>', { noremap = true, desc = "Toggle Blame" })
 
 -- NvimTree Mappings
 vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>', { desc = 'Toggle NvimTree' })

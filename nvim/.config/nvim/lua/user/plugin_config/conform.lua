@@ -9,11 +9,12 @@ require("conform").setup({
                 json = { "prettier" },
                 yaml = { "prettier" },
                 markdown = { "prettier" },
+                htmlangular = { "prettier" }
         },
         format_on_save = {
                 -- Disabled because triggered manually after ESLint
                 lsp_fallback = false,
-                timeout_ms = 500,
+                timeout_ms = 1000,
         },
 })
 

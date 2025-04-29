@@ -9,5 +9,7 @@ require("user.plugin_config.diffview")
 require("user.plugin_config.lualine")
 require("user.plugin_config.refactoring")
 require("user.plugin_config.nvim-colorizer")
+require("user.plugin_config.fidget")
+require("user.plugin_config.blame")
 
 return {}
