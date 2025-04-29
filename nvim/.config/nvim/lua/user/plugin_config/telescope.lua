@@ -1,6 +1,13 @@
 _G.telescope_builtin = require('telescope.builtin')
 
 require('telescope').setup({
+        extensions = {
+                ["ui-select"] = {
+                        require("telescope.themes").get_dropdown {
+                                -- even more opts
+                        }
+                }
+        },
         defaults = {
                 layout_strategy = "vertical",
                 sorting_strategy = "ascending",
@@ -18,4 +25,6 @@ require('telescope').setup({
 
         }
 })
+
+require("telescope").load_extension("ui-select")
 return {}

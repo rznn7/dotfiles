@@ -31,6 +31,7 @@ Plug 'williamboman/mason.nvim'           -- Package manager for LSP servers
 Plug 'williamboman/mason-lspconfig.nvim' -- Bridge between mason and lspconfig
 Plug 'stevearc/conform.nvim'             -- Formatter
 Plug 'ThePrimeagen/refactoring.nvim'     -- Refactoring utilities
+Plug 'nvim-telescope/telescope-ui-select.nvim'
 
 -- Completion and snippets
 Plug 'hrsh7th/nvim-cmp'         -- Completion engine
