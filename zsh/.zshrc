@@ -139,8 +139,14 @@ alias cd="z"
 # Environment variables and tools
 export CHROME_BIN=/usr/bin/chromium
 
-# Homebrew setup
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Homebrew setup - only run if brew exists
+if [ -d "/home/linuxbrew/.linuxbrew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+elif [ -d "$HOME/.linuxbrew" ]; then
+  eval "$($HOME/.linuxbrew/bin/brew shellenv)"
+elif [ -f "/opt/homebrew/bin/brew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # NVM configuration
 export NVM_DIR="$HOME/.nvm"
