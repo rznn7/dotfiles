@@ -201,5 +201,5 @@ exec_always --no-startup-id "feh --bg-fill $HOME/Pictures/wallpaper.jpg"
 # Set US int layout
 exec_always --no-startup-id setxkbmap us -variant intl
 
-# Disable mouse acceleration for all devices
-exec --no-startup-id xset m 0 0
+# Start picom
+exec --no-startup-id picom --config ~/.config/picom.conf -b
