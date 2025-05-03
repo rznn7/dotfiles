@@ -19,5 +19,16 @@ vim.keymap.set(
   { noremap = true, silent = false, desc = "Reload nvim config" }
 )
 
--- Add any other keymaps from your original config here
--- Note: LazyVim already sets up many keymaps, check its default keymaps first
+-- UI
+
+-- Navigation between windows
+vim.keymap.set("n", "<leader>w<Left>", "<C-w>h", { desc = "Go to the left window" })
+vim.keymap.set("n", "<leader>w<Right>", "<C-w>l", { desc = "Go to the right window" })
+vim.keymap.set("n", "<leader>w<Up>", "<C-w>k", { desc = "Go to the window above" })
+vim.keymap.set("n", "<leader>w<Down>", "<C-w>j", { desc = "Go to the window below" })
+
+-- Moving windows
+vim.keymap.set("n", "<leader>w<S-Left>", "<C-w>H", { desc = "Move window to the left" })
+vim.keymap.set("n", "<leader>w<S-Right>", "<C-w>L", { desc = "Move window to the right" })
+vim.keymap.set("n", "<leader>w<S-Up>", "<C-w>K", { desc = "Move window to the top" })
+vim.keymap.set("n", "<leader>w<S-Down>", "<C-w>J", { desc = "Move window to the bottom" })
