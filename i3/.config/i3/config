@@ -217,5 +217,6 @@ exec_always --no-startup-id "feh --bg-fill $HOME/Pictures/wallpaper.jpg"
 exec_always --no-startup-id setxkbmap us -variant intl
 
 # Start picom
-exec --no-startup-id picom --config ~/.config/picom.conf -b
+# exec --no-startup-id picom --config ~/.config/picom.conf -b
+
 exec --no-startup-id dunst
