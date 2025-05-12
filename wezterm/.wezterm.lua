@@ -10,7 +10,7 @@ config.font = wezterm.font_with_fallback({
 	"Source Han Sans",
 })
 config.enable_tab_bar = false
-config.color_scheme = "rose-pine"
+config.color_scheme = "rose-pine-dawn"
 config.window_background_opacity = 0.98
 
 return config
