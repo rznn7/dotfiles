@@ -1,0 +1,34 @@
+#!/bin/bash
+i3lock \
+  --image=/path/to/background.png \
+  --tiling \
+  --clock \
+  --timecolor=fffaf3ff \
+  --datecolor=fffaf3ff \
+  --ringcolor=907aa9ff \
+  --insidecolor=00000000 \
+  --linecolor=fffaf3ff \
+  --separatorcolor=00000000 \
+  --keyhlcolor=d7827eff \
+  --bshlcolor=b4637aff \
+  --ringvercolor=907aa9ff \
+  --insidevercolor=00000000 \
+  --ringwrongcolor=b4637aff \
+  --insidewrongcolor=b4637a88 \
+  --veriftext="Verifying..." \
+  --wrongtext="Wrong!" \
+  --noinputtext="No Input" \
+  --locktext="Locking..." \
+  --lockfailedtext="Lock Failed!" \
+  --time-font="Inter" \
+  --date-font="Inter" \
+  --timesize=36 \
+  --datesize=18 \
+  --time-align=center \
+  --date-align=center \
+  --timestr="%H:%M:%S" \
+  --datestr="%A, %d %B %Y" \
+  --verifsize=14 \
+  --wrongsize=14 \
+  --indicator \
+  --radius=120

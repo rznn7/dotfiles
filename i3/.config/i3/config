@@ -203,7 +203,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Set wallpaper
-exec_always --no-startup-id "feh --bg-fill $HOME/Pictures/wallpaper.jpg"
+exec_always --no-startup-id "feh --bg-fill --geometry -0 $HOME/Pictures/wallpaper.jpg"
 
 # Set US int layout
 exec_always --no-startup-id setxkbmap us -variant intl
