@@ -194,7 +194,7 @@ bar {
   }
 }
 
-bindsym $mod+d exec "dmenu_run -nf '#6E6A86' -nb '#232136' -sb '#56526E' -sf '#E0DEF4' -fn 'Inter' -p 'dmenu prompt &gt;'"
+bindsym $mod+d exec "dmenu_run -nf '#6E6A86' -nb '#232136' -sb '#56526E' -sf '#E0DEF4' -fn 'Inter'"
 
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
