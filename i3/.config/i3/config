@@ -45,8 +45,6 @@ bindsym $mod+Return exec wezterm
 # kill focused window
 bindsym $mod+Shift+A kill
 
-# start dmenu 
-bindsym $mod+d exec --no-startup-id dmenu_run -nb '#fffaf3' -sb '#575279' -fn 'Inter'
 
 # change focus
 bindsym $mod+Left focus left
@@ -172,37 +170,31 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Colors
-set $bg-color            #797593
-set $inactive-bg-color   #9893a5
-set $text-color          #fffaf3
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #b4637a
-set $indicator           #d7827e
+# class                 border  bground text    indicator child_border
+client.focused          #2A283E #2A283E #E0DEF4 #C4A7E7   #2A283E
+client.focused_inactive #6E6A86 #6E6A86 #908CAA #6E6A86   #6E6A86
+client.unfocused        #6E6A86 #6E6A86 #908CAA #6E6A86   #6E6A86
+client.urgent           #EB6F92 #EB6F92 #E0DEF4 #EB6F92   #EB6F92
+client.placeholder      #000000 #0C0C0C #E0DEF4 #000000   #0C0C0C
 
-# window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $indicator
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator
+client.background       #000000
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
         status_command i3blocks
-        colors {
-                background #faf4ed
-                statusline #575279
+  colors {
+    background #232136
+    statusline #E0DEF4
+    separator  #908CAA
 
-                # workspace colors         border              background         text
-                focused_workspace         #907aa9           #907aa9          $text-color
-                active_workspace           $bg-color           $inactive-bg-color $text-color
-                inactive_workspace         #fffaf3  #fffaf3 $inactive-text-color
-                urgent_workspace           $urgent-bg-color    $urgent-bg-color   $text-color
-        }
+    focused_workspace  #56526E #56526E #E0DEF4
+    active_workspace   #2A273F #2A273F #E0DEF4
+    inactive_workspace #2A273F #2A273F #6E6A86
+    urgent_workspace   #EB6F92 #EB6F92 #E0DEF4
+    binding_mode       #EA9A97 #EA9A97 #E0DEF4
+  }
 }
+
+bindsym $mod+d exec "dmenu_run -nf '#6E6A86' -nb '#232136' -sb '#56526E' -sf '#E0DEF4' -fn 'Inter' -p 'dmenu prompt &gt;'"
 
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
@@ -215,8 +207,5 @@ exec_always --no-startup-id "feh --bg-fill $HOME/Pictures/wallpaper.jpg"
 
 # Set US int layout
 exec_always --no-startup-id setxkbmap us -variant intl
-
-# Start picom
-# exec --no-startup-id picom --config ~/.config/picom.conf -b
 
 exec --no-startup-id dunst
