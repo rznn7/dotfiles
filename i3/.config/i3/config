@@ -209,3 +209,7 @@ exec_always --no-startup-id "feh --bg-fill --geometry -0 $HOME/Pictures/wallpape
 exec_always --no-startup-id setxkbmap us -variant intl
 
 exec --no-startup-id dunst
+
+ gaps inner 6
+
+gaps outer 3
