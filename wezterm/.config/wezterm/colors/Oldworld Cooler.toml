@@ -1,25 +1,37 @@
-[colors]
 # Oldworld Cooler - Dark theme with relaxing and no-saturated colors
 # Cooler variant
 
-# Basic colors
+[colors]
+ansi = [
+    "#27282a",  # black
+    "#ea83bf",  # red
+    "#90b995",  # green
+    "#e6a79d",  # yellow
+    "#92b3d5",  # blue
+    "#a1a1cf",  # magenta
+    "#85bab2",  # cyan
+    "#c8c7cd"   # white
+]
+brights = [
+    "#696874",  # bright black
+    "#ea83bf",  # bright red
+    "#90b995",  # bright green
+    "#e6a79d",  # bright yellow
+    "#92b3d5",  # bright blue
+    "#e29edb",  # bright magenta
+    "#85bab2",  # bright cyan
+    "#c8c7cd"   # bright white
+]
 foreground = "#c8c7cd"
 background = "#161617"
 cursor_bg = "#c8c7cd"
 cursor_fg = "#161617"
 cursor_border = "#c8c7cd"
-
-# Selection colors
 selection_bg = "#2a2b2c"
 selection_fg = "#c8c7cd"
-
-# Scrollbar colors
 scrollbar_thumb = "#313234"
-
-# Split/pane colors
 split = "#444448"
 
-# Tab bar colors
 [colors.tab_bar]
 background = "#161617"
 
@@ -44,29 +56,6 @@ fg_color = "#696874"
 bg_color = "#18181a"
 fg_color = "#9c9ca6"
 
-# ANSI colors (0-7)
-[colors.ansi]
-black = "#27282a"
-red = "#ea83bf"
-green = "#90b995"
-yellow = "#e6a79d"
-blue = "#92b3d5"
-magenta = "#a1a1cf"
-cyan = "#85bab2"
-white = "#c8c7cd"
-
-# Bright ANSI colors (8-15)
-[colors.brights]
-black = "#696874"
-red = "#ea83bf"
-green = "#90b995"
-yellow = "#e6a79d"
-blue = "#92b3d5"
-magenta = "#e29edb"
-cyan = "#85bab2"
-white = "#c8c7cd"
-
-# Extended colors for better 256-color support
 [colors.indexed]
 "16" = "#f5919a"  # orange
 "17" = "#e29edb"  # bright magenta

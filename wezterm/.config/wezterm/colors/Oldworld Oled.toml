@@ -1,25 +1,37 @@
-[colors]
 # Oldworld OLED - Dark theme with relaxing and no-saturated colors
 # OLED variant
 
-# Basic colors
+[colors]
+ansi = [
+    "#161617",
+    "#ea83a5",
+    "#90b99f",
+    "#e6b99d",
+    "#92a2d5",
+    "#aca1cf",
+    "#85b5ba",
+    "#c9c7cd"
+]
+brights = [
+    "#6c6874",
+    "#ea83a5",
+    "#90b99f",
+    "#e6b99d",
+    "#92a2d5",
+    "#e29eca",
+    "#85b5ba",
+    "#c9c7cd"
+]
 foreground = "#c9c7cd"
 background = "#000000"
 cursor_bg = "#c9c7cd"
 cursor_fg = "#000000"
 cursor_border = "#c9c7cd"
-
-# Selection colors
 selection_bg = "#2a2a2c"
 selection_fg = "#c9c7cd"
-
-# Scrollbar colors
 scrollbar_thumb = "#313134"
-
-# Split/pane colors
 split = "#444448"
 
-# Tab bar colors
 [colors.tab_bar]
 background = "#000000"
 
@@ -44,43 +56,20 @@ fg_color = "#6c6874"
 bg_color = "#18181a"
 fg_color = "#9f9ca6"
 
-# ANSI colors (0-7)
-[colors.ansi]
-black = "#161617"
-red = "#ea83a5"
-green = "#90b99f"
-yellow = "#e6b99d"
-blue = "#92a2d5"
-magenta = "#aca1cf"
-cyan = "#85b5ba"
-white = "#c9c7cd"
-
-# Bright ANSI colors (8-15)
-[colors.brights]
-black = "#6c6874"
-red = "#ea83a5"
-green = "#90b99f"
-yellow = "#e6b99d"
-blue = "#92a2d5"
-magenta = "#e29eca"
-cyan = "#85b5ba"
-white = "#c9c7cd"
-
-# Extended colors for better 256-color support
 [colors.indexed]
-"16" = "#f5a191"  # orange
-"17" = "#e29eca"  # bright magenta
-"18" = "#000000"  # gray0 (true black)
-"19" = "#18181a"  # gray1
-"20" = "#1b1b1c"  # gray2
-"21" = "#2a2a2c"  # gray3
-"22" = "#313134"  # gray4
-"23" = "#444448"  # gray5
-"24" = "#6c6874"  # subtext4
-"25" = "#8b8693"  # subtext3
-"26" = "#9f9ca6"  # subtext2
-"27" = "#b4b1ba"  # subtext1
-"28" = "#000000"  # bg_dark (true black)
+"16" = "#f5a191"
+"17" = "#e29eca"
+"18" = "#000000"
+"19" = "#18181a"
+"20" = "#1b1b1c"
+"21" = "#2a2a2c"
+"22" = "#313134"
+"23" = "#444448"
+"24" = "#6c6874"
+"25" = "#8b8693"
+"26" = "#9f9ca6"
+"27" = "#b4b1ba"
+"28" = "#000000"
 
 [metadata]
 name = "Oldworld OLED"
