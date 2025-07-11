@@ -170,31 +170,49 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# class                 border  bground text    indicator child_border
-client.focused          #2A283E #2A283E #E0DEF4 #C4A7E7   #2A283E
-client.focused_inactive #6E6A86 #6E6A86 #908CAA #6E6A86   #6E6A86
-client.unfocused        #6E6A86 #6E6A86 #908CAA #6E6A86   #6E6A86
-client.urgent           #EB6F92 #EB6F92 #E0DEF4 #EB6F92   #EB6F92
-client.placeholder      #000000 #0C0C0C #E0DEF4 #000000   #0C0C0C
+# set primary dark muted colorscheme colors
 
-client.background       #000000
+set $base #161617
+set $surface #1b1b1c
+set $overlay #2a2a2c
+set $muted #6c6874
+set $subtle #8b8693
+set $text #c9c7cd
+set $love #ea83a5
+set $gold #e6b99d
+set $rose #f5a191
+set $pine #90b99f
+set $foam #85b5ba
+set $iris #aca1cf
+set $highlightlow #18181a
+set $highlightmed #313134
+set $highlighthigh #3b3b3e
+
+# Theming border and Windows --------------
+# target                 title bg        text        indicator   border
+client.focused          $highlightmed   $highlightmed   $text       $iris       $highlightmed
+client.focused_inactive $muted          $muted          $subtle     $muted      $muted
+client.unfocused        $muted          $muted          $subtle     $muted      $muted
+client.urgent           $love           $love           $text       $love       $love
+client.placeholder      $base           $base           $text       $base       $base
+client.background       $base
 
 bar {
         status_command i3blocks
   colors {
-    background #232136
-    statusline #E0DEF4
-    separator  #908CAA
+    background $base
+    statusline $text
+    separator  $subtle
 
-    focused_workspace  #56526E #56526E #E0DEF4
-    active_workspace   #2A273F #2A273F #E0DEF4
-    inactive_workspace #2A273F #2A273F #6E6A86
-    urgent_workspace   #EB6F92 #EB6F92 #E0DEF4
-    binding_mode       #EA9A97 #EA9A97 #E0DEF4
+    focused_workspace  $highlighthigh $highlighthigh $text
+    active_workspace   $overlay $overlay $text
+    inactive_workspace $overlay $overlay $muted
+    urgent_workspace   $love $love $text
+    binding_mode       $rose $rose $base
   }
 }
 
-bindsym $mod+d exec "dmenu_run -nf '#6E6A86' -nb '#232136' -sb '#56526E' -sf '#E0DEF4' -fn 'Inter'"
+bindsym $mod+d exec "dmenu_run -nf '$muted' -nb '$base' -sb '$highlighthigh' -sf '$text' -fn 'Inter'"
 
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
@@ -210,6 +228,6 @@ exec_always --no-startup-id setxkbmap us -variant intl
 
 exec --no-startup-id dunst
 
- gaps inner 6
+gaps inner 6
 
 gaps outer 3
