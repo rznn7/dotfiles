@@ -73,3 +73,8 @@ require("lazy").setup({
     },
   },
 })
+
+if vim.g.neovide then
+  vim.o.guifont = "JetBrains Mono:h12"
+  vim.g.neovide_scroll_animation_length = 0.05
+end

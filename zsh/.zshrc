@@ -136,6 +136,9 @@ alias la='eza -A'
 eval "$(zoxide init zsh)"
 alias cd="z"
 
+# neovide alias
+alias neovide="neovide &"
+
 # Environment variables and tools
 export CHROME_BIN=/usr/bin/chromium
 
