@@ -63,5 +63,4 @@ for package in "${packages[@]}"; do
   stow --no-folding "$package"
 done
 
-# Done!
 echo "Done! Configurations have been linked."
