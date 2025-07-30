@@ -32,3 +32,8 @@ vim.keymap.set("n", "<leader>w<S-Left>", "<C-w>H", { desc = "Move window to the 
 vim.keymap.set("n", "<leader>w<S-Right>", "<C-w>L", { desc = "Move window to the right" })
 vim.keymap.set("n", "<leader>w<S-Up>", "<C-w>K", { desc = "Move window to the top" })
 vim.keymap.set("n", "<leader>w<S-Down>", "<C-w>J", { desc = "Move window to the bottom" })
+
+-- Mark navigation and operations
+vim.keymap.set("n", "gm", "'", { desc = "Go to mark (line)" })
+vim.keymap.set("n", "gM", "`", { desc = "Go to mark (exact position)" })
+vim.keymap.set("n", "dm", ":delmarks ", { desc = "Delete mark" })
