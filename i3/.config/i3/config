@@ -228,9 +228,8 @@ exec_always --no-startup-id setxkbmap us -variant intl
 
 exec --no-startup-id dunst
 
-gaps inner 6
-
-gaps outer 3
+# gaps inner 6
+# gaps outer 3
 
 # polybar
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
