@@ -190,9 +190,9 @@ set $highlighthigh #3b3b3e
 
 # Theming border and Windows --------------
 # target                 title bg        text        indicator   border
-client.focused          $highlightmed   $highlightmed   $text       $iris       $highlightmed
-client.focused_inactive $muted          $muted          $subtle     $muted      $muted
-client.unfocused        $muted          $muted          $subtle     $muted      $muted
+client.focused          $highlightmed   $highlightmed   $text       $iris       $text
+client.focused_inactive $muted          $muted          $subtle     $muted      $surface
+client.unfocused        $muted          $muted          $subtle     $muted      $surface
 client.urgent           $love           $love           $text       $love       $love
 client.placeholder      $base           $base           $text       $base       $base
 client.background       $base
@@ -238,3 +238,6 @@ for_window [floating] resize set 1920 1080, move position center
 exec_always --no-startup-id autotiling
 
 bindsym $mod+Shift+space floating toggle, resize set 1920 1080, move position center
+
+for_window [class="^.*"] border pixel 0
+
