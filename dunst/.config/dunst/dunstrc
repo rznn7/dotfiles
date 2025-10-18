@@ -1,0 +1,38 @@
+[global]
+    # Position (top-right, top-left, bottom-right, etc)
+    origin = bottom-right
+    offset = (0,23)
+
+    # Notification size
+    width = 400
+    height = (0, 300)
+
+    # Font
+    font = Monospace 10
+
+    # Transparency (0-100)
+    transparency = 0
+
+    # Padding and gaps
+    padding = 12
+    horizontal_padding = 12
+    frame_width = 2
+    gap_size = 0
+
+[urgency_low]
+    background = "#161617"
+    foreground = "#c9c7cd"
+    frame_color = "#c9c7cd"
+    timeout = 5
+
+[urgency_normal]
+    background = "#161617"
+    foreground = "#c9c7cd"
+    frame_color = "#92a2d5"
+    timeout = 10
+
+[urgency_critical]
+    background = "#161617"
+    foreground = "#c9c7cd"
+    frame_color = "#ea83a5"
+    timeout = 0
