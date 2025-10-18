@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# Kill existing bars
-polybar-msg cmd quit
+# Terminate already running bar instances
+killall -q polybar
 
-BAR="mybar"
-LOG="/tmp/polybar_${BAR}.log"
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-echo "---" | tee -a "$LOG"
-(polybar "$BAR" 2>&1 | tee -a "$LOG") &
+# Launch Polybar
+polybar mybar 2>&1 | tee -a /tmp/polybar.log &
 disown
 
-echo "Bar $BAR launched..."
+echo "Polybar launched..."

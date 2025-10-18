@@ -40,6 +40,8 @@ exec_always --no-startup-id "feh --bg-fill --geometry -0 $HOME/Pictures/wallpape
 # Keyboard layout
 exec_always --no-startup-id setxkbmap us -variant intl
 
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # ============================================================================
 # MEDIA KEYS
@@ -230,17 +232,17 @@ client.placeholder      $base           $base           $text       $base       
 client.background       $base
 
 # Status bar
-bar {
-   status_command i3blocks
-  colors {
-    background $base
-    statusline $text
-    separator  $subtle
-
-    focused_workspace  $highlighthigh $highlighthigh $text
-    active_workspace   $overlay $overlay $text
-    inactive_workspace $overlay $overlay $muted
-    urgent_workspace   $love $love $text
-    binding_mode       $rose $rose $base
-  }
-}
+# bar {
+#   status_command i3blocks
+#   colors {
+#     background $base
+#     statusline $text
+#     separator  $subtle
+# 
+#     focused_workspace  $highlighthigh $highlighthigh $text
+#     active_workspace   $overlay $overlay $text
+#     inactive_workspace $overlay $overlay $muted
+#     urgent_workspace   $love $love $text
+#     binding_mode       $rose $rose $base
+#   }
+# }
