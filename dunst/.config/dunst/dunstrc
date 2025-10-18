@@ -4,11 +4,11 @@
     offset = (0,23)
 
     # Notification size
-    width = 400
+    width = (0, 400)
     height = (0, 300)
 
     # Font
-    font = Monospace 10
+    font = JetBrains Mono 10
 
     # Transparency (0-100)
     transparency = 0
