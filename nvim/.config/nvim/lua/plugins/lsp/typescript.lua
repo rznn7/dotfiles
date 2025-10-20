@@ -6,7 +6,7 @@ return {
         settings = {
           typescript = {
             inlayHints = {
-              functionLikeReturnTypes = { enabled = true },
+              functionLikeReturnTypes = { enabled = false },
               variableTypes = { enabled = true },
             },
           },
