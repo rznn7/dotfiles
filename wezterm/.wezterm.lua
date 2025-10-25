@@ -9,6 +9,7 @@ config.font = wezterm.font_with_fallback({
 	"MesloLGS Nerd Font Mono",
 	"SFMono",
 	"Source Han Sans",
+	"Noto Color Emoji",
 })
 config.adjust_window_size_when_changing_font_size = false
 config.enable_tab_bar = false
