@@ -176,10 +176,6 @@ function y() {
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
-# SDKMAN configuration (keep at end of file)
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 # pnpm
 export PNPM_HOME="/home/rznn/.local/share/pnpm"
 case ":$PATH:" in
@@ -187,3 +183,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# gdvm
+export PATH="/home/rznn/.gdvm/bin/current_godot:/home/rznn/.gdvm/bin:$PATH"
+# gdvm end
+
+# sdkman (keep at end of file)
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# sdkman end
+
