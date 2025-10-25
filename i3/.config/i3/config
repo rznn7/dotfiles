@@ -104,6 +104,9 @@ bindsym $mod+e layout toggle split
 
 # Floating window defaults
 for_window [floating] resize set 1920 1080, move position center
+for_window [class="Godot" instance="Godot_ProjectList"] floating enable, move position center
+
+
 
 
 # ============================================================================
