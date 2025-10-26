@@ -38,7 +38,8 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id "feh --bg-fill --geometry -0 $HOME/Pictures/wallpaper.jpg"
 
 # Keyboard layout
-exec_always --no-startup-id setxkbmap us -variant intl
+exec_always --no-startup-id setxkbmap -layout "us(intl),fr"
+bindsym $mod+k exec --no-startup-id "current=$(setxkbmap -query | grep layout | awk '{print $2}'); if echo $current | grep -q us; then setxkbmap fr; else setxkbmap 'us(intl)'; fi"
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
