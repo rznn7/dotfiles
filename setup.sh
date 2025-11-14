@@ -27,7 +27,7 @@ fi
 cd "$(dirname "$0")"
 
 # Array of packages to stow
-packages=("nvim" "lazygit" "ghostty" "wezterm" "zsh" "i3" "picom" "dunst")
+packages=("nvim" "lazygit" "ghostty" "wezterm" "zsh" "i3" "picom" "dunst" "misc")
 
 # Create ~/.config directory if it doesn't exist
 mkdir -p ~/.config
