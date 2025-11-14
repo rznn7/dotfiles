@@ -6,7 +6,7 @@ return {
     },
     picker = {
       layout = {
-        preset = "vertical",
+        preset = "ivy_split",
       },
       sources = {
         files = {
