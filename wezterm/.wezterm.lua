@@ -8,9 +8,9 @@ config.enable_tab_bar = false
 
 config.color_scheme = "Oldworld"
 
-config.font_size = 13.5
+config.font_size = 13
 config.font = wezterm.font_with_fallback({
-	"JetBrainsMono Nerd Font Mono",
+	{ family = "JetBrainsMono Nerd Font Mono" },
 	"MesloLGS Nerd Font Mono",
 	"SFMono",
 	"Source Han Sans",
