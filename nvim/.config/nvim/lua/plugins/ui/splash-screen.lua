@@ -17,6 +17,11 @@ return {
            ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     
  ]],
       },
+      sections = {
+        { section = "header" },
+        { section = "keys", indent = 2, padding = 1 },
+        { section = "startup" },
+      },
     },
   },
 }
