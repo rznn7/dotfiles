@@ -25,7 +25,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.java" },
     { import = "lazyvim.plugins.extras.lang.rust" },
-    { import = "lazyvim.plugins.extras.lang.dotnet" },
+    --{ import = "lazyvim.plugins.extras.lang.dotnet" },
 
     { import = "lazyvim.plugins.extras.formatting.biome" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
@@ -77,7 +77,7 @@ require("lazy").setup({
 })
 
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h12"
+  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h11"
   vim.g.neovide_scroll_animation_length = 0.05
   vim.g.neovide_hide_mouse_when_typing = true
 end
