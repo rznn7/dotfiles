@@ -19,21 +19,6 @@ return {
             preset = "vscode",
           },
         },
-        grep = {
-          layout = {
-            preset = "vertical",
-          },
-        },
-        lsp_references = {
-          layout = {
-            preset = "vertical",
-          },
-        },
-        lsp_definitions = {
-          layout = {
-            preset = "vertical",
-          },
-        },
         buffers = {
           layout = {
             preset = "vscode",
