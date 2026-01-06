@@ -136,13 +136,16 @@ alias la='eza -A'
 eval "$(zoxide init zsh)"
 alias cd="z"
 
+# nvim alias
+alias n="nvim"
+
 # neovide alias
 alias neovide="neovide &"
 
 # copy to clipboard
 alias xc="xclip -selection clipboard"
 
-# Environment variables and tools
+# environment variables and tools
 export CHROME_BIN=/usr/bin/chromium
 
 # Homebrew setup - only run if brew exists
@@ -153,9 +156,6 @@ elif [ -d "$HOME/.linuxbrew" ]; then
 elif [ -f "/opt/homebrew/bin/brew" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
-
-# Open new term in same dir
-alias dupt="wezterm start --cwd ."
 
 # NVM configuration
 export NVM_DIR="$HOME/.nvm"
