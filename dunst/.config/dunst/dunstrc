@@ -16,7 +16,7 @@
     # Padding and gaps
     padding = 12
     horizontal_padding = 12
-    frame_width = 2
+    frame_width = 1
     gap_size = 0
 
 [urgency_low]
@@ -28,7 +28,7 @@
 [urgency_normal]
     background = "#161617"
     foreground = "#c9c7cd"
-    frame_color = "#92a2d5"
+    frame_color = "#c9c7cd"
     timeout = 10
 
 [urgency_critical]

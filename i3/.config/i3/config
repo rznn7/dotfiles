@@ -9,7 +9,7 @@ font pango:inter 8
 gaps inner 6
 gaps outer 3
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 
 # ============================================================================
@@ -230,7 +230,7 @@ set $highlightmed #313134
 set $highlighthigh #3b3b3e
 
 # Window borders
-client.focused          $highlightmed   $highlightmed   $text       $iris       $blue
+client.focused          $highlightmed   $highlightmed   $text       $iris       $text
 client.focused_inactive $muted          $muted          $subtle     $muted      $surface
 client.unfocused        $muted          $muted          $subtle     $muted      $surface
 client.urgent           $love           $love           $text       $love       $love
