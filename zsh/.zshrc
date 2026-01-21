@@ -199,3 +199,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 # sdkman end
 
+
+# opencode
+export PATH=/home/rznn/.opencode/bin:$PATH
