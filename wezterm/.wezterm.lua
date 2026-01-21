@@ -33,34 +33,6 @@ wezterm.on("trigger-dev-split", function(window, pane)
 		cwd = cwd,
 	})
 
-	local term2 = pane:split({
-		direction = "Bottom",
-		size = 0.5,
-		cwd = cwd,
-	})
-
-	nvim_pane:send_text("nvim\n")
-end)
-
--- Tab layout (3 separate tabs)
-wezterm.on("trigger-dev-tabs", function(window, pane)
-	local cwd = pane:get_current_working_dir()
-	if cwd then
-		cwd = cwd.file_path
-	end
-
-	-- Current tab becomes terminal 1
-
-	-- Create second terminal tab
-	window:mux_window():spawn_tab({
-		cwd = cwd,
-	})
-
-	-- Create nvim tab
-	local tab, nvim_pane, _ = window:mux_window():spawn_tab({
-		cwd = cwd,
-	})
-
 	nvim_pane:send_text("nvim\n")
 end)
 
