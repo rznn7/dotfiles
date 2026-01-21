@@ -1,8 +1,8 @@
 return {
-  "dgox16/oldworld.nvim",
+  "wnkz/monoglow.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd("colorscheme oldworld")
+    vim.cmd("colorscheme monoglow")
   end,
 }
