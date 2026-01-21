@@ -188,6 +188,8 @@ esac
 export PATH="/home/rznn/.gdvm/bin/current_godot:/home/rznn/.gdvm/bin:$PATH"
 # gdvm end
 
+# opencode
+export PATH=/home/POLYSPOT/gjestin/.opencode/bin:$PATH
 
 # starship
 eval "$(starship init zsh)"
