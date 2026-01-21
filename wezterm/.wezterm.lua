@@ -3,10 +3,10 @@ local config = wezterm.config_builder()
 
 config.default_prog = { "/usr/bin/zsh" }
 config.enable_tab_bar = false
-config.color_scheme = "Oldworld"
+config.color_scheme = "Mono Glow"
 config.font_size = 13.1
 config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono Nerd Font Mono" },
+	{ family = "JetBrainsMono Nerd Font Mono", weight = "Medium" },
 	"MesloLGS Nerd Font Mono",
 	"SFMono",
 	"Source Han Sans",
