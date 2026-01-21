@@ -252,3 +252,5 @@ client.background       $base
 #     binding_mode       $rose $rose $base
 #   }
 # }
+
+include ~/.config/i3/config.local
