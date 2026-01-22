@@ -29,7 +29,7 @@ wezterm.on("trigger-dev-split", function(window, pane)
 
 	local nvim_pane = pane:split({
 		direction = "Right",
-		size = 0.6,
+		size = 0.7,
 		cwd = cwd,
 	})
 
