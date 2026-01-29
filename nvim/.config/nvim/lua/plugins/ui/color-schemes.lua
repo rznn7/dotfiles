@@ -1,8 +1,14 @@
 return {
-  "wnkz/monoglow.nvim",
+  "rose-pine/neovim",
+  name = "rose-pine",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd("colorscheme monoglow")
+    require("rose-pine").setup({
+      highlight_groups = {
+        LspInlayHint = { fg = "highlight_high", bg = "base" },
+      },
+    })
+    vim.cmd("colorscheme rose-pine")
   end,
 }
