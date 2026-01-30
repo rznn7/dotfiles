@@ -254,3 +254,5 @@ client.background       $base
 # }
 
 include ~/.config/i3/config.local
+
+exec --no-startup-id ~/.config/i3/scripts/local.sh
