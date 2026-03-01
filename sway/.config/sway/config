@@ -1,0 +1,172 @@
+# ── core ─────────────────────────────────────────────────────────────────────
+
+set $mod Mod4
+
+gaps inner 6
+gaps outer 3
+default_border pixel 1
+floating_modifier $mod normal
+tiling_drag modifier
+
+# ── colors ───────────────────────────────────────────────────────────────────
+
+set $base         #161617
+set $surface      #1b1b1c
+set $overlay      #2a2a2c
+set $muted        #6c6874
+set $subtle       #8b8693
+set $text         #c9c7cd
+set $love         #ea83a5
+set $gold         #e6b99d
+set $rose         #f5a191
+set $pine         #90b99f
+set $foam         #85b5ba
+set $iris         #aca1cf
+set $blue         #92a2d5
+set $highlightlow #18181a
+set $highlightmed #313134
+set $highlighthigh #3b3b3e
+
+client.focused          $highlightmed  $highlightmed  $text    $iris   $subtle
+client.focused_inactive $muted         $muted         $subtle  $muted  $surface
+client.unfocused        $muted         $muted         $subtle  $muted  $surface
+client.urgent           $love          $love          $text    $love   $love
+client.placeholder      $base          $base          $text    $base   $base
+client.background       $base
+
+# ── output ───────────────────────────────────────────────────────────────────
+
+output "Microstep MAG342CQRV DB6H070801351" mode 3440x1440@100Hz
+output * bg /home/rznn/Pictures/wallpaper.jpg fill
+
+# ── input ────────────────────────────────────────────────────────────────────
+
+input type:keyboard {
+    xkb_layout  "us,fr"
+    xkb_options "grp:win_space_toggle"
+}
+
+input type:pointer {
+    accel_profile flat
+    pointer_accel 0
+}
+
+# ── autostart ────────────────────────────────────────────────────────────────
+
+exec swayidle -w \
+    timeout 300  'swaylock -f' \
+    timeout 600  'swaymsg "output * dpms off"' \
+    resume       'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f'
+
+exec nm-applet --indicator
+exec dunst
+exec_always autotiling
+
+# ── workspaces ───────────────────────────────────────────────────────────────
+
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "0"
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# ── focus & windows ──────────────────────────────────────────────────────────
+
+bindsym $mod+Left        focus left
+bindsym $mod+Down        focus down
+bindsym $mod+Up          focus up
+bindsym $mod+Right       focus right
+bindsym $mod+q           focus parent
+bindsym $mod+space       focus mode_toggle
+
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+Shift+a     kill
+bindsym $mod+Shift+f     fullscreen toggle
+bindsym $mod+Shift+space floating toggle, resize set 1920 1080, move position center
+
+bindsym $mod+s layout stacking
+bindsym $mod+z layout tabbed
+bindsym $mod+e layout toggle split
+
+for_window [floating]                    resize set 1920 1080, move position center
+for_window [app_id="^Godot_ProjectList$"] floating enable, move position center
+
+# ── launchers ────────────────────────────────────────────────────────────────
+
+bindsym $mod+Return exec wezterm
+bindsym $mod+d      exec rofi -show drun
+bindsym $mod+b      exec firefox
+bindsym $mod+f      exec thunar
+bindsym $mod+g      exec /home/rznn/.gdvm/bin/godot --single-window
+bindsym $mod+c      exec notify-send Calendar "$(cal -m)"
+bindsym $mod+p      exec ~/.local/bin/vpn-toggle
+bindsym Print       exec grim -g "$(slurp)" - | wl-copy
+
+# ── media keys ───────────────────────────────────────────────────────────────
+
+bindsym XF86AudioMute        exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioPlay        exec playerctl play-pause
+bindsym XF86AudioPause       exec playerctl play-pause
+bindsym XF86AudioNext        exec playerctl next
+bindsym XF86AudioPrev        exec playerctl previous
+bindsym XF86MonBrightnessUp  exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
+# ── modes ────────────────────────────────────────────────────────────────────
+
+bindsym $mod+r       mode "resize"
+bindsym $mod+Shift+e exec $HOME/.config/rofi/powermenu.sh
+bindsym $mod+Shift+c reload
+
+mode "resize" {
+    bindsym Left   resize shrink width 10 px or 10 ppt
+    bindsym Down   resize grow height 10 px or 10 ppt
+    bindsym Up     resize shrink height 10 px or 10 ppt
+    bindsym Right  resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+# ── bar ──────────────────────────────────────────────────────────────────────
+
+bar {
+    swaybar_command waybar
+}
+
+include ~/.config/sway/config.local

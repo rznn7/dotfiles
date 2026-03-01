@@ -1,0 +1,47 @@
+ignore-empty-password
+
+# size
+indicator-radius=120
+indicator-thickness=7
+
+# font
+font=Inter
+font-size=8
+
+# background
+color=000000
+
+# ring
+ring-color=333333
+ring-ver-color=999999
+ring-wrong-color=cc3333
+ring-clear-color=333333
+
+# line (between ring and inside)
+line-color=000000
+line-ver-color=000000
+line-wrong-color=000000
+line-clear-color=000000
+
+# inside
+inside-color=000000
+inside-ver-color=000000
+inside-wrong-color=000000
+inside-clear-color=000000
+
+# key press highlight on ring
+key-hl-color=ffffff
+bs-hl-color=444444
+
+# text
+show-keyboard-layout
+text-color=202020
+layout-text-color=202020
+layout-bg-color=00000000
+layout-border-color=00000000
+text-ver-color=00000000
+text-wrong-color=00000000
+text-clear-color=00000000
+
+# separator
+separator-color=00000000

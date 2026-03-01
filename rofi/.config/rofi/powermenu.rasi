@@ -1,0 +1,18 @@
+@import "theme.rasi"
+
+window {
+    width: 200px;
+}
+
+listview {
+    lines: 6;
+}
+
+inputbar {
+    children: [ prompt ];
+    padding:  8px 12px;
+}
+
+prompt {
+    text-color: @fg;
+}
