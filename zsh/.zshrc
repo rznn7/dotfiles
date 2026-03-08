@@ -144,6 +144,7 @@ alias neovide="neovide &"
 
 # copy to clipboard
 alias xc="xclip -selection clipboard"
+alias xcw="wl-copy"
 
 # environment variables and tools
 export CHROME_BIN=/usr/bin/chromium
