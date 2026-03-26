@@ -44,7 +44,7 @@ output * bg /home/rznn/Pictures/wallpaper.jpg fill
 input type:keyboard {
     xkb_layout  "us,fr"
     xkb_variant "intl,"
-    xkb_options "grp:win_space_toggle"
+#   xkb_options "grp:win_space_toggle"
 }
 
 input type:pointer {
