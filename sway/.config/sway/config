@@ -8,6 +8,9 @@ default_border pixel 1
 floating_modifier $mod normal
 tiling_drag modifier
 
+font pango:JetBrainsMono Nerd Font 8
+titlebar_padding 3 1
+
 # ── colors ───────────────────────────────────────────────────────────────────
 
 set $base         #161617
@@ -171,3 +174,5 @@ bar {
 }
 
 include ~/.config/sway/config.local
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
