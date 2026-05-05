@@ -155,7 +155,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 # ============================================================================
 
 bindsym $mod+Return exec wezterm
-bindsym $mod+d exec "dmenu_run -nf '$muted' -nb '$base' -sb '$highlighthigh' -sf '$text' -fn 'Inter'"
+bindsym $mod+d exec rofi -show drun
 bindsym $mod+b exec firefox
 bindsym $mod+f exec thunar
 bindsym $mod+g exec /home/rznn/.gdvm/bin/godot --single-window
@@ -195,7 +195,7 @@ mode "system" {
         bindsym $mod+Shift+e mode "default"
 }
 
-bindsym $mod+Shift+e mode "system"
+bindsym $mod+Shift+e exec $HOME/.config/rofi/powermenu.sh
 
 
 # ============================================================================

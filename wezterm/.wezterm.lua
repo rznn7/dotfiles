@@ -144,17 +144,17 @@ config.keys = {
 		action = wezterm.action.AdjustPaneSize({ "Down", 5 }),
 	},
 
-	-- Tab switching: Alt+Ctrl+1..4
-	{ key = "0", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(0) },
-	{ key = "1", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(1) },
-	{ key = "2", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(2) },
-	{ key = "3", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(3) },
-	{ key = "4", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(4) },
-	{ key = "5", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(5) },
-	{ key = "6", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(6) },
-	{ key = "7", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(7) },
-	{ key = "8", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(8) },
-	{ key = "9", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(9) },
+	-- Tab switching: Alt+Ctrl+[space,x,c,d,r,s,t,w,f,p] -> tabs 0..9
+	{ key = " ", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(0) },
+	{ key = "x", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(1) },
+	{ key = "c", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(2) },
+	{ key = "d", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(3) },
+	{ key = "r", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(4) },
+	{ key = "s", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(5) },
+	{ key = "t", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(6) },
+	{ key = "w", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(7) },
+	{ key = "f", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(8) },
+	{ key = "p", mods = "ALT|CTRL", action = wezterm.action.ActivateTab(9) },
 
 	-- Relative tab nav
 	{ key = "[", mods = "ALT|CTRL", action = wezterm.action.ActivateTabRelative(-1) },
