@@ -54,13 +54,13 @@ done
 # Unstow if already stowed
 for package in "${packages[@]}"; do
   echo "Unstowing $package if already stowed..."
-  stow --no-folding -D "$package" 2>/dev/null || true
+  stow --no-folding --target="$HOME" -D "$package" 2>/dev/null || true
 done
 
 # Stow packages
 for package in "${packages[@]}"; do
   echo "Stowing $package..."
-  stow --no-folding "$package"
+  stow --no-folding --target="$HOME" "$package"
 done
 
 echo "Done! Configurations have been linked."

@@ -1,0 +1,8 @@
+profile external {
+    output "Microstep MAG342CQRV DB6H070801351" mode 3440x1440@60Hz
+    output eDP-1 disable
+}
+
+profile laptop {
+    output eDP-1 enable
+}

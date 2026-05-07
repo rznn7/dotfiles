@@ -39,8 +39,9 @@ client.background       $base
 
 # ── output ───────────────────────────────────────────────────────────────────
 
-output "Microstep MAG342CQRV DB6H070801351" mode 3440x1440@100Hz
-output * bg /home/rznn/Pictures/wallpaper.jpg fill
+exec_always kanshi
+
+output * bg $HOME/Pictures/wallpaper.jpg fill
 
 # ── input ────────────────────────────────────────────────────────────────────
 

@@ -42,26 +42,26 @@ wezterm.on("format-tab-title", function(tab)
 	return string.format(" %d:%s ", tab.tab_index, tab.active_pane.title or "")
 end)
 config.color_scheme = "rose-pine"
-config.font_size = 13.1
+config.font_size = 14
 config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono Nerd Font Mono", weight = "Medium" },
+	{ family = "JetBrainsMono Nerd Font Mono" },
 	"MesloLGS Nerd Font Mono",
 	"SFMono",
 	"Source Han Sans",
 	"Noto Color Emoji",
 })
-config.line_height = 1.1
+config.line_height = 1
 config.window_padding = {
-	left = 8,
-	right = 8,
-	top = 8,
-	bottom = 8,
+	left = 0,
+	right = 0,
+	top = 0,
+	bottom = 0,
 }
 
 -- Dev session: nvim, claude, run, test in current cwd
--- Big screen (>= 2000px wide): nvim+claude split in tab 0, run/test in tabs 1/2
+-- Big screen (>= 3000px wide): nvim+claude split in tab 0, run/test in tabs 1/2
 -- Small screen: 4 separate tabs
-local DEV_WIDE_THRESHOLD = 2000
+local DEV_WIDE_THRESHOLD = 3000
 
 wezterm.on("trigger-dev-tabs", function(window, pane)
 	local cwd = pane:get_current_working_dir()
