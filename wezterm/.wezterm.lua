@@ -84,7 +84,6 @@ wezterm.on("trigger-dev-tabs", function(window, pane)
 	end
 
 	mux_win:spawn_tab({ cwd = cwd })
-	mux_win:spawn_tab({ cwd = cwd })
 
 	-- Focus first tab after init
 	mux_win:tabs()[1]:activate()
