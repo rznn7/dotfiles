@@ -14,6 +14,7 @@
   "modules-right": [
     "pulseaudio",
     "network",
+    "battery",
     "clock",
     "tray"
   ],
@@ -49,6 +50,17 @@
     "format-wifi": " {essid}",
     "format-ethernet": " eth",
     "format-disconnected": "offline",
+    "tooltip": false
+  },
+  "battery": {
+    "interval": 30,
+    "format": "{icon} {capacity:02}",
+    "format-charging": "󰂄 {capacity:02}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
     "tooltip": false
   },
   "clock": {
