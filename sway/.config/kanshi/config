@@ -3,6 +3,11 @@ profile external {
     output eDP-1 disable
 }
 
+profile external_aoc {
+    output "AOC 2460X D02E5BA000238" mode 1920x1200@59.950Hz
+    output eDP-1 disable
+}
+
 profile laptop {
     output eDP-1 enable
 }
