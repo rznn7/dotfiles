@@ -137,7 +137,8 @@ bindsym $mod+f      exec thunar
 bindsym $mod+g      exec /home/rznn/.gdvm/bin/godot --single-window
 bindsym $mod+c      exec notify-send Calendar "$(cal -m)"
 bindsym $mod+p      exec $HOME/.config/rofi/dev-dirs.sh
-bindsym Print       exec grim -g "$(slurp)" - | wl-copy
+bindsym Print       exec bash -c 'f=$(mktemp /tmp/shot-XXXXXX.png) && grim -c "$f" && ~/.cargo/bin/satty --filename "$f" --fullscreen'
+bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
 
 # ── media keys ───────────────────────────────────────────────────────────────
 
