@@ -76,7 +76,7 @@ wezterm.on("trigger-dev-tabs", function(window, pane)
 	pane:send_text("nvim\n")
 
 	if wide then
-		local claude_pane = pane:split({ direction = "Right", size = 0.45, cwd = cwd })
+		local claude_pane = pane:split({ direction = "Left", size = 0.45, cwd = cwd })
 		claude_pane:send_text("claude\n")
 	else
 		local _, claude_pane = mux_win:spawn_tab({ cwd = cwd })
