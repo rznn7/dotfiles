@@ -3,3 +3,6 @@ quitOnTopLevelReturn: true
 nerdFontsVersion: 3
 git:
   localBranchSortOrder: recency
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
