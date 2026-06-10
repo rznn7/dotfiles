@@ -11,7 +11,7 @@ show_all=0
 # category|prog1 prog2 ...
 required=(
   "core|stow git"
-  "sway|sway swayidle swaylock swaymsg kanshi autotiling nm-applet dunst dbus-update-activation-environment"
+  "sway|sway swayidle swaylock swaymsg kanshi autotiling nm-applet dunst dbus-update-activation-environment jq"
   "bar/launcher|waybar rofi"
   "terminal/shell|wezterm zsh starship zoxide eza mise"
   "apps|firefox thunar notify-send cal"

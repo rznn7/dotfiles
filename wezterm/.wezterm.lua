@@ -69,25 +69,55 @@ wezterm.on("trigger-dev-tabs", function(window, pane)
 		cwd = cwd.file_path
 	end
 
+	-- Project name = basename of the dev cwd. Record every pane we spawn in a
+	-- GLOBAL pane-id -> project map so the OS window title (see
+	-- format-window-title) reports "wezdev:<project>", which the sway
+	-- workspace-name daemon reads to label the workspace. (This wezterm version
+	-- has no pane:set_user_var, so GLOBAL is the portable mechanism.)
+	local project = cwd and cwd:gsub("/+$", ""):match("([^/]+)$") or ""
+
 	local mux_win = window:mux_window()
 	local dims = window:get_dimensions()
 	local wide = dims.pixel_width >= DEV_WIDE_THRESHOLD
 
+	local dev_panes = wezterm.GLOBAL.dev_panes or {}
+	local function mark(p)
+		dev_panes[tostring(p:pane_id())] = project
+	end
+
+	mark(pane)
 	pane:send_text("nvim\n")
 
 	if wide then
 		local claude_pane = pane:split({ direction = "Left", size = 0.45, cwd = cwd })
+		mark(claude_pane)
 		claude_pane:send_text("claude\n")
 	else
 		local _, claude_pane = mux_win:spawn_tab({ cwd = cwd })
+		mark(claude_pane)
 		claude_pane:send_text("claude\n")
 	end
 
-	mux_win:spawn_tab({ cwd = cwd })
+	local _, run_pane = mux_win:spawn_tab({ cwd = cwd })
+	mark(run_pane)
+
+	wezterm.GLOBAL.dev_panes = dev_panes
 
 	-- Focus first tab after init
 	mux_win:tabs()[1]:activate()
 	pane:activate()
+end)
+
+-- OS window title: when the active pane belongs to a dev session, expose the
+-- project as "wezdev:<project>" so window managers can read it. Otherwise fall
+-- back to the active pane's own title.
+wezterm.on("format-window-title", function(tab, pane)
+	local map = wezterm.GLOBAL.dev_panes or {}
+	local proj = map[tostring(pane.pane_id)]
+	if proj and proj ~= "" then
+		return "wezdev:" .. proj
+	end
+	return pane.title or "wezterm"
 end)
 
 -- Keybindings

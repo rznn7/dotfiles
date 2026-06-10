@@ -67,6 +67,7 @@ exec swayidle -w \
 exec nm-applet --indicator
 exec dunst
 exec_always autotiling
+exec ~/.config/sway/scripts/dev-ws-names.sh
 
 # ── workspaces ───────────────────────────────────────────────────────────────
 
