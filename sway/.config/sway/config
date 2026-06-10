@@ -2,8 +2,8 @@
 
 set $mod Mod4
 
-gaps inner 6
-gaps outer 3
+gaps inner 0
+gaps outer 0
 default_border pixel 1
 floating_modifier $mod normal
 tiling_drag modifier
