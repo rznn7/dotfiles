@@ -20,7 +20,7 @@ required=(
   "file-manager|yazi"
   "editor|nvim"
   "neovim-deps|rg fd tree-sitter node npm prettier eslint stylua shellcheck shfmt flake8"
-  "git-tui|lazygit"
+  "git-tui|lazygit delta"
 )
 
 optional=(
